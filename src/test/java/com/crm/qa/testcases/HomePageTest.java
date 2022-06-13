@@ -2,6 +2,8 @@ package com.crm.qa.testcases;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.Properties;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -28,7 +30,7 @@ public class HomePageTest extends TestBase{
 	public void setUp() {
 			
 		
-		setUp();
+		initialization();
 		loginPage = new LoginPage(driver);
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 

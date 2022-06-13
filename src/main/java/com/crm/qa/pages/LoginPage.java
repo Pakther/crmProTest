@@ -32,6 +32,8 @@ public class LoginPage extends TestBase {
 //	WebElement crmLogo;
 	
 	
+	
+	
 	By userNameBtn = By.xpath("//*[@name = 'username']");
 	By passwordBtn = By.xpath("//*[@name = 'password']");
 	By loginBtn = By.xpath("//input[@type = 'submit']");
@@ -71,19 +73,19 @@ public class LoginPage extends TestBase {
 	}
 	
 
-	public HomePage login(String username, String password) {
+	public HomePage login(String un, String pwd) {
+		
+		
+//		
+//		driver.findElement(userNameBtn).sendKeys(username.toString());
+//		driver.findElement(passwordBtn).sendKeys(password.toString());
+//		driver.findElement(loginBtn).click();
 		
 		
 		
-		driver.findElement(userNameBtn).sendKeys(username.toString());
-		driver.findElement(passwordBtn).sendKeys(password.toString());
+		driver.findElement(userNameBtn).sendKeys(un);
+		driver.findElement(passwordBtn).sendKeys(pwd);
 		driver.findElement(loginBtn).click();
-		
-		
-		
-//		userNameBtn.sendKeys(un);
-//		passwordBtn.sendKeys(pwd);
-//		loginBtn.click();
 		
 		return new HomePage(driver);
 		
